@@ -37,18 +37,18 @@ export default function Contact() {
             return;
           }
 
-          toast.success("Email sent successfully!");
+          toast.success("E-mail envoyé avec succès !");
         }}
       >
         {/* Prénom / Nom */}
         <div className="flex space-x-4">
           <div className="flex flex-col items-start space-y-2 w-1/2">
             <label className="text-[#AC96D5]">Prénom</label>
-            <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="firstName" type="text" required maxLength={500} />
+            <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="firstName" type="text" maxLength={50} />
           </div>
           <div className="flex flex-col items-start space-y-2 w-1/2">
             <label className="text-[#AC96D5]">Nom de famille</label>
-            <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="lastName" type="text" required maxLength={500} />
+            <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="lastName" type="text" maxLength={50} />
           </div>
         </div>
 
@@ -58,7 +58,7 @@ export default function Contact() {
             <label className="text-[#AC96D5]">E-mail</label>
             <label className="text-[#C5B5E1]">(obligatoire)</label>
           </div>
-          <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="senderEmail" type="email" required maxLength={500} />
+          <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="senderEmail" type="email" required maxLength={70} />
         </div>
 
         {/* Message */}

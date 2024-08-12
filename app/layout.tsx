@@ -3,6 +3,8 @@ import { Kanit } from "next/font/google";
 import Header from '@/components/header'
 import "./globals.css";
 import Footer from '@/components/footer'
+import { Toaster } from "react-hot-toast";
+
 
 
 const kanit = Kanit({
@@ -29,7 +31,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
-
+            <Toaster position="bottom-right" />
       </body>
     </html>
   );
