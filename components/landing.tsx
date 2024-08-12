@@ -25,14 +25,14 @@ export default function Landing() {
             className="-z-[999]" // image est en arrière-plan
             />
             
-            <div className="flex flex-col w-8/12 mx-auto justify-center h-screen ">
+            <div className="flex flex-col w-8/12 mx-auto justify-center  h-screen">
                 <div className='text-neutral-100 font-medium text-4xl sm:text-6xl mt-32'>
                     <p className="font-serif">L&apos;aide à domicile humaine et personnalisée</p>
                 </div>
                 {/* contact */}
                 <div className='flex flex-col sm:flex-row w-full items-center justify-between'>
                     <div className='flex space-x-4 mt-32 px-4 py-2 rounded-full w-full justify-center '>
-                        <a href="#" className="bg-gray-50 rounded-full px-9 py-5 text-[#B2A0D3] text-lg">TROUVER DE L&apos;AIDE</a>
+                        <a href="/contact" className="bg-gray-50 rounded-full px-9 py-5 text-[#B2A0D3] text-lg">TROUVER DE L&apos;AIDE</a>
                     </div>
                 </div>
             </div>
@@ -96,9 +96,9 @@ export default function Landing() {
                                 transition={{ duration: 0.2 }}
                                 className="overflow-hidden"
                             >
-                                <p className="text-gray-50 text-2xl flex w-9/12 py-8">
+                                <div className="text-gray-50 text-2xl flex w-9/12 py-8">
                                     {item.content}
-                                </p>
+                                </div>
                             </motion.div>
                         </div>
                     ))}
