@@ -18,9 +18,9 @@ export default function Header() {
     const pathname = usePathname()
     return (
         <>
-            <nav className="fixed md:relative md:mx-auto w-full bg-gray-50 md:bg-transparent">
-                <div className="flex flex-wrap items-center mx-auto py-5 px-10 justify-between">
-                    <div className="hidden md:w-1/3 md:block" id="navbar-default">
+            <nav className="fixed md:relative  w-full md:bg-transparent">
+                <div className="flex flex-wrap items-center  py-5 px-10 justify-between">
+                    <div className="hidden md:w-1/3 md:block " id="navbar-default">
                         <ul className="text-[18px] items-center font-normal text-gray-50 flex flex-col md:p-0 mt-4 md:flex-row md:space-x-12 rtl:space-x-reverse md:mt-0 md:border-0">
                             <Link 
                             className={`link ${pathname === '/' ? 'underline underline-offset-8' : linkclassNamees}`} 
@@ -34,7 +34,7 @@ export default function Header() {
                             </Link>
                             <Link 
                             className={`link ${pathname === '/contact' ? 'underline underline-offset-8' : linkclassNamees}`} 
-                            href="">
+                            href="/contact">
                             Contact
                             </Link>
                         

@@ -39,18 +39,18 @@ export default function Landing() {
 
             {/* Valeurs */}
             <div className="flex justify-center bg-gray-50 py-24">
-                <div className="flex w-8/12 font-bold text-5xl text-orange-400 justify-between">
-                    <p className="w-1/3 text-center font-serif">Bienveillance</p>
-                    <p className="w-1/3 text-center font-serif">Écoute</p>
-                    <p className="w-1/3 text-center font-serif">Respect</p>
+                <div className="flex flex-col items-center md:flex-row space-y-8 md:space-y-0 w-8/12 font-bold text-4xl md:text-5xl text-orange-400 md:justify-between">
+                    <p className="md:w-1/3 text-center font-serif">Bienveillance</p>
+                    <p className="md:w-1/3 text-center font-serif">Écoute</p>
+                    <p className="md:w-1/3 text-center font-serif">Respect</p>
                 </div>
             </div>
             
             {/* Nos services */}
             <div className="flex flex-col justify-center bg-[#E7DFF5]">
-                <p className="flex justify-center font-medium text-5xl text-[#AC96D5] m-20 font-serif">Nos services</p>
-                <div className="flex flex-col sm:flex-row justify-between bg-[#E7DFF5]">
-                    <div className="flex flex-col w-full bg-gray-50 m-10 p-10">
+                <p className="flex justify-center font-medium text-4xl text-[#AC96D5] m-20 font-serif">Nos services</p>
+                <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-10 md:m-10 justify-between bg-[#E7DFF5] p-3 md:p-0">
+                    <div className="flex flex-col w-full bg-gray-50  p-10">
                         <Image
                             src={seniorWalking}
                             alt='Seniors drawing'
@@ -61,7 +61,7 @@ export default function Landing() {
                         />
                         <div className="flex justify-center font-medium text-4xl text-[#AC96D5] pt-10 font-serif">Accompagnement</div>
                     </div>
-                    <div className="flex flex-col w-full bg-gray-50 m-10 p-10">
+                    <div className="flex flex-col w-full bg-gray-50  p-10">
                         <Image
                             src={iStockDrawing}
                             alt='Seniors drawing'
@@ -77,44 +77,44 @@ export default function Landing() {
             </div>
 
             {/* A propos */}
-            <div className="flex flex-col space-y-40 justify-center items-center bg-[#AC96D5] py-36 px-96">
-            <p className="flex w-full font-medium text-5xl text-gray-50 font-serif">À propos de nous</p>
+            <div className="flex flex-col space-y-20 md:space-y-40 justify-center items-center bg-[#AC96D5] pt-14 pb-44 md:pt-36 px-8 md:px-96">
+                <p className="flex w-full font-medium text-4xl md:text-5xl text-gray-50 font-serif">À propos de nous</p>
 
-            <div className="flex flex-col space-y-4 w-full pb-4 border-b font-">
-                {accordionData.map((item, index) => (
-                    <div key={index} className="flex flex-col ">
-                        <button
-                            className="flex w-full text-gray-50 text-2xl justify-between border-t pt-4"
-                            onClick={() => toggleAccordion(index)}
-                        >
-                            <span>{item.title}</span>
-                            <span>{openIndex === index ? '-' : '+'}</span>
-                        </button>
-                        <motion.div
-                            initial={{ height: 0 }}
-                            animate={{ height: openIndex === index ? 'auto' : 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="overflow-hidden"
-                        >
-                            <p className="text-gray-50 text-2xl flex w-9/12 py-8">
-                                {item.content}
-                            </p>
-                        </motion.div>
-                    </div>
-                ))}
-            </div>
+                <div className="flex flex-col space-y-4 w-full pb-4 border-b">
+                    {accordionData.map((item, index) => (
+                        <div key={index} className="flex flex-col ">
+                            <button
+                                className="flex w-full text-gray-50 text-2xl justify-between border-t pt-4"
+                                onClick={() => toggleAccordion(index)}
+                            >
+                                <span>{item.title}</span>
+                                <span>{openIndex === index ? '-' : '+'}</span>
+                            </button>
+                            <motion.div
+                                initial={{ height: 0 }}
+                                animate={{ height: openIndex === index ? 'auto' : 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                            >
+                                <p className="text-gray-50 text-2xl flex w-9/12 py-8">
+                                    {item.content}
+                                </p>
+                            </motion.div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {/* section 1 */}
-            <div className="flex flex-col space-y-4 justify-center items-center bg-gray-50 py-36 px-60">
+            <div className="flex flex-col space-y-16 md:space-y-4 justify-center items-center bg-gray-50 py-36 px-8 md:px-60">
                 <div className="flex w-full justify-start">
-                    <p className="w-2/3 text-2xl text-[#AC96D5] italic underline">Avis de nos clients</p>
+                    <p className="w-2/3 text-lg md:text-2xl text-[#AC96D5] italic underline">Avis de nos clients</p>
                 </div>
-                <div className="flex w-full justify-start">
-                    <p className="text-4xl text-orange-500 w-2/3 font-serif">« Mon épouse retrouve le sourire et la joie de vivre en présence de l&apos;auxiliaire d&apos;Humana »</p>
+                <div className="flex w-full md:justify-start">
+                    <p className="text-3xl md:text-4xl text-orange-500 md:w-2/3 font-serif">« Mon épouse retrouve le sourire et la joie de vivre en présence de l&apos;auxiliaire d&apos;Humana »</p>
                 </div>
-                <div className="flex w-full justify-end">
-                    <p className="text-4xl text-orange-500 w-2/3 font-serif">« Mon père ancien pilote, peut ressortir se balader à l&apos;aérodrome grâce à l&apos;accompagnement d&apos;Humana 😎 »</p>
+                <div className="flex w-full md:justify-end">
+                    <p className="text-3xl md:text-4xl text-orange-500 md:w-2/3 font-serif">« Mon père ancien pilote, peut ressortir se balader à l&apos;aérodrome grâce à l&apos;accompagnement d&apos;Humana 😎 »</p>
                 </div>
             </div>
             <div className="flex justify-center bg-[#E7DFF5] pt-28">
