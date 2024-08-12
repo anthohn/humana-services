@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
 import Header from '@/components/header'
-import ActiveSectionContextProvider from "@/context/active-section-context";
 import "./globals.css";
 import Footer from '@/components/footer'
 
@@ -24,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body suppressHydrationWarning={true} className={kanit.className}>
-          <ActiveSectionContextProvider>
 
             <Header />
             <main className="">
@@ -32,7 +30,6 @@ export default function RootLayout({
             </main>
             <Footer />
 
-          </ActiveSectionContextProvider>
       </body>
     </html>
   );
