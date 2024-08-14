@@ -1,11 +1,6 @@
-
-"use client";
-
 import ContactPage from "@/app/components/ContactPage";
 
-
 export default function Contact() {
-
     return (
         <>
             <div className="flex justify-center bg-[#E7DFF5]">

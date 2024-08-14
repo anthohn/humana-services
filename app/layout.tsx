@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body suppressHydrationWarning={true} className={kanit.className}>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster position="bottom-right" />
+        <Header />
+        {children}
+        <Footer />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );

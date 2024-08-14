@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from "react";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
