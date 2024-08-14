@@ -1,5 +1,7 @@
 
-import ContactPage from "@/components/contactPage";
+"use client";
+
+import ContactPage from "@/app/components/ContactPage";
 
 
 export default function Contact() {
@@ -17,11 +19,10 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="w-full md:w-7/12">
-                    
                         <ContactPage />
                     </div>
                 </div>
             </div>
         </>
-    )
+    );
 }

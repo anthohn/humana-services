@@ -22,15 +22,13 @@ export default function About() {
                         </p>
                     </div>
                     <div className="md:w-7/12">
-                    
-                    <Image
-                            src={seniorTalking}
-                            alt='Seniors talking'
-                            // objectFit='cover'
-                            layout='cover'
-
-                            className='rounded-3xl'
-                        /></div>
+                        <Image
+                                src={seniorTalking}
+                                alt='Seniors talking'
+                                layout='cover'
+                                className='rounded-3xl'
+                            />
+                    </div>
                 </div>
             </div>
         </>
