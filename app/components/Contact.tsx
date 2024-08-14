@@ -7,26 +7,10 @@ import toast from "react-hot-toast";
 export default function Contact() {
 
   return (
-    <motion.section
-      id="contact"
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center p-8 md:p-0"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-    >
+    <div className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center p-8 md:p-0">
       <p className="text-[#AC96D5] font-medium text-5xl font-serif">Contactez-nous !</p>
-
       <form
-        className="mt-10 flex flex-col space-y-3 bg-white p-10 rounded-2xl"
+        className="mt-10 flex flex-col space-y-3 bg-white p-10 rounded-lg"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -69,6 +53,6 @@ export default function Contact() {
         </div>
         <SubmitBtn />
       </form>
-    </motion.section>
+    </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
@@ -8,22 +7,7 @@ import toast from "react-hot-toast";
 export default function Contact() {
 
   return (
-    <motion.section
-      id="contact"
-      className="mb-20 sm:mb-28 text-center "
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
-    >
+    <div className="mb-20 sm:mb-28 text-center">
       <form
         className="flex flex-col space-y-3 p-10 rounded-2xl"
         action={async (formData) => {
@@ -68,6 +52,6 @@ export default function Contact() {
         </div>
         <SubmitBtn />
       </form>
-    </motion.section>
+    </div>
   );
 }

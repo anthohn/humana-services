@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import iStockBack from '../public/iStock-1487976856.jpg'
-import iStockDrawing from '../public/iStock-M-seniorDrawing.jpg' 
+import seniorDrawing from '../public/iStock-M-seniorDrawing.jpg' 
 import seniorWalking from '../public/iStock-M-seniorWalking.jpg'
 import Contact from "@/app/components/Contact";
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Image
             src={iStockBack}
-            layout='fill'
+            fill
             quality={100}
             alt='Seniors'
             className="-z-[999] object-cover	" // image est en arrière-plan
@@ -25,7 +25,7 @@ export default function Home() {
             
             <div className="flex flex-col w-8/12 mx-auto justify-center  h-screen">
                 <div className='text-neutral-100 font-medium text-4xl sm:text-6xl mt-32'>
-                    <p className="font-serif">L&apos;aide à domicile humaine et personnalisée</p>
+                    <p className="font-serif text-center">L&apos;aide à domicile humaine et personnalisée</p>
                 </div>
                 {/* contact */}
                 <div className='flex flex-col sm:flex-row w-full items-center justify-between'>
@@ -37,74 +37,76 @@ export default function Home() {
 
             {/* Valeurs */}
             <div className="flex justify-center bg-gray-50 py-24">
-                <div className="flex flex-col items-center md:flex-row space-y-8 md:space-y-0 w-8/12 font-bold text-4xl md:text-5xl text-orange-400 md:justify-between">
-                    <p className="md:w-1/3 text-center font-serif">Bienveillance</p>
-                    <p className="md:w-1/3 text-center font-serif">Écoute</p>
-                    <p className="md:w-1/3 text-center font-serif">Respect</p>
+                <div className="flex flex-col items-center md:flex-row space-y-8 md:space-y-0 w-9/12 font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-orange-400 md:justify-between">
+                    <p className="md:w-1/3 text-center font-serif ">Bienveillance</p>
+                    <p className="md:w-1/3 text-center font-serif ">Écoute</p>
+                    <p className="md:w-1/3 text-center font-serif ">Respect</p>
                 </div>
             </div>
             
             {/* Nos services */}
-            <div className="flex flex-col justify-center bg-[#E7DFF5]">
-                <p className="flex justify-center font-medium text-4xl text-[#AC96D5] m-20 font-serif">Nos services</p>
-                <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-10 md:m-10 justify-between bg-[#E7DFF5] p-3 md:p-0">
-                    <div className="flex flex-col w-full bg-gray-50  p-10">
+            <div className="flex flex-col justify-center bg-[#E7DFF5] py-20">
+                <p className="flex justify-center font-medium text-5xl text-[#AC96D5] mb-20 font-serif">Nos services</p>
+                <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 justify-around ">
+                    <div className="flex flex-col w-full sm:w-5/12 bg-gray-50 p-10">
                         <Image
                             src={seniorWalking}
-                            alt='Seniors drawing'
+                            alt='Seniors walking'
                             style={{
                                 width: '100%',
                                 height: 'auto',
                             }}
                         />
-                        <div className="flex justify-center font-medium text-4xl text-[#AC96D5] pt-10 font-serif">Accompagnement</div>
+                        <div className="flex justify-center font-medium text-3xl md:text-4xl text-[#AC96D5] pt-10 font-serif text-center">Accompagnement</div>
                     </div>
-                    <div className="flex flex-col w-full bg-gray-50  p-10">
+                    <div className="flex flex-col w-full sm:w-5/12 bg-gray-50 p-10">
                         <Image
-                            src={iStockDrawing}
+                            src={seniorDrawing}
                             alt='Seniors drawing'
                             style={{
                                 width: '100%',
                                 height: 'auto',
                             }}
                         />
-                        <div className="flex justify-center font-medium text-4xl text-[#AC96D5] pt-10 font-serif">Activités stimulantes</div>
+                        <div className="flex justify-center font-medium text-3xl md:text-4xl text-[#AC96D5] pt-10 font-serif text-center">Activités stimulantes</div>
                     </div>
                 </div>
-                
             </div>
 
             {/* A propos */}
-            <div className="flex flex-col space-y-20 md:space-y-40 justify-center items-center bg-[#AC96D5] pt-14 pb-44 md:pt-36 px-8 md:px-96">
-                <p className="flex w-full font-medium text-4xl md:text-5xl text-gray-50 font-serif">À propos de nous</p>
+            <div className="flex flex-col space-y-20 lg:space-y-40 justify-center items-center bg-[#AC96D5] pt-14 pb-44 lg:pt-36 px-8">
 
-                <div className="flex flex-col space-y-4 w-full pb-4 border-b">
-                    {accordionData.map((item, index) => (
-                        <div key={index} className="flex flex-col ">
-                            <button
-                                className="flex w-full text-gray-50 text-2xl justify-between border-t pt-4"
-                                onClick={() => toggleAccordion(index)}
-                            >
-                                <span>{item.title}</span>
-                                <span>{openIndex === index ? '-' : '+'}</span>
-                            </button>
-                            <motion.div
-                                initial={{ height: 0 }}
-                                animate={{ height: openIndex === index ? 'auto' : 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="overflow-hidden"
-                            >
-                                <div className="text-gray-50 text-2xl flex w-9/12 py-8">
-                                    {item.content}
-                                </div>
-                            </motion.div>
-                        </div>
-                    ))}
+                <div className="flex flex-col space-y-4 w-full lg:w-2/3 pb-4 border-b">
+                  <p className="flex w-full font-medium text-4xl xl:text-5xl text-gray-50 font-serif">À propos de nous</p>
+                  {accordionData.map((item, index) => (
+                      <div key={index} className="flex flex-col ">
+                          <button
+                              className="flex w-full text-gray-50 text-2xl justify-between border-t pt-4"
+                              onClick={() => toggleAccordion(index)}
+                          >
+                              <span>{item.title}</span>
+                              <span>{openIndex === index ? '-' : '+'}</span>
+                          </button>
+                          <motion.div
+                              initial={{ height: 0 }}
+                              animate={{ height: openIndex === index ? 'auto' : 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                          >
+                              <div className="text-gray-50 text-2xl flex w-9/12 py-8">
+                                  {item.content}
+                              </div>
+                          </motion.div>
+                      </div>
+                  ))}
                 </div>
             </div>
 
-            {/* section 1 */}
-            <div className="flex flex-col space-y-16 md:space-y-4 justify-center items-center bg-gray-50 py-36 px-8 md:px-60">
+            {/* Avis 1 */}
+            
+            <div 
+              className="flex flex-col space-y-16 md:space-y-4 justify-center items-center bg-gray-50 py-36 px-8 md:px-60">
+
                 <div className="flex w-full justify-start">
                     <p className="w-2/3 text-lg md:text-2xl text-[#AC96D5] italic underline">Avis de nos clients</p>
                 </div>
