@@ -8,6 +8,7 @@ export default function Contact() {
 
   return (
     <div className="mb-20 sm:mb-28 text-center">
+      
       <form
         className="flex flex-col space-y-3 p-10 rounded-2xl"
         action={async (formData) => {

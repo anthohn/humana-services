@@ -1,4 +1,3 @@
-
 import seniorTalking from '../../public/iStock-M-seniorTalking.jpg'
 import Image from 'next/image'
 
@@ -23,11 +22,11 @@ export default function About() {
                     </div>
                     <div className="md:w-7/12">
                         <Image
-                                src={seniorTalking}
-                                alt='Seniors talking'
-                                layout='cover'
-                                className='rounded-3xl'
-                            />
+                            src={seniorTalking}
+                            alt='Seniors talking'
+                            layout='cover'
+                            className='rounded-3xl'
+                        />
                     </div>
                 </div>
             </div>
