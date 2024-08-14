@@ -24,14 +24,14 @@ export default function Home() {
         className="-z-[999] object-cover	" // image est en arrière-plan
       />
         
-      <div className="flex flex-col w-8/12 mx-auto justify-center  h-screen">
-          <div className='text-neutral-100 font-medium text-4xl sm:text-6xl mt-32'>
+      <div className="flex flex-col w-10/12 sm:w-8/12 mx-auto justify-center h-screen">
+          <div className='text-neutral-100 font-medium text-4xl md:text-5xl lg:text-6xl xl:text-7xl'>
               <p className="font-serif text-center">L&apos;aide à domicile humaine et personnalisée</p>
           </div>
           {/* contact */}
           <div className='flex flex-col sm:flex-row w-full items-center justify-between'>
-              <div className='flex space-x-4 mt-32 px-4 py-2 rounded-full w-full justify-center '>
-                  <a href="/contact" className="bg-gray-50 rounded-full px-9 py-5 text-[#B2A0D3] text-lg">TROUVER DE L&apos;AIDE</a>
+              <div className='flex space-x- mt-12 md:mt-32 px-4 py-2 rounded-full w-full justify-center '>
+                  <a href="/contact" className="bg-gray-50 text-center rounded-full px-9 py-5 text-[#B2A0D3] text-lg">TROUVER DE L&apos;AIDE</a>
               </div>
           </div>
       </div>
@@ -76,31 +76,30 @@ export default function Home() {
 
       {/* A propos */}
       <div className="flex flex-col space-y-20 lg:space-y-40 justify-center items-center bg-[#AC96D5] pt-14 pb-44 lg:pt-36 px-8">
-
-          <div className="flex flex-col space-y-4 w-full lg:w-2/3 pb-4 border-b">
-            <p className="flex w-full font-medium text-4xl xl:text-5xl text-gray-50 font-serif">À propos de nous</p>
-            {accordionData.map((item, index) => (
-                <div key={index} className="flex flex-col ">
-                    <button
-                        className="flex w-full text-gray-50 text-2xl justify-between border-t pt-4"
-                        onClick={() => toggleAccordion(index)}
-                    >
-                        <span>{item.title}</span>
-                        <span>{openIndex === index ? '-' : '+'}</span>
-                    </button>
-                    <motion.div
-                        initial={{ height: 0 }}
-                        animate={{ height: openIndex === index ? 'auto' : 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                    >
-                        <div className="text-gray-50 text-2xl flex w-9/12 py-8">
-                            {item.content}
-                        </div>
-                    </motion.div>
-                </div>
-            ))}
-          </div>
+        <div className="flex flex-col space-y-4 w-full lg:w-2/3 pb-4 border-b">
+          <p className="flex w-full font-medium text-4xl xl:text-5xl text-gray-50 font-serif">À propos de nous</p>
+          {accordionData.map((item, index) => (
+              <div key={index} className="flex flex-col ">
+                  <button
+                      className="flex w-full text-gray-50 text-2xl justify-between border-t pt-4"
+                      onClick={() => toggleAccordion(index)}
+                  >
+                      <span>{item.title}</span>
+                      <span>{openIndex === index ? '-' : '+'}</span>
+                  </button>
+                  <motion.div
+                      initial={{ height: 0 }}
+                      animate={{ height: openIndex === index ? 'auto' : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                  >
+                      <div className="text-gray-50 text-2xl flex w-9/12 py-8">
+                          {item.content}
+                      </div>
+                  </motion.div>
+              </div>
+          ))}
+        </div>
       </div>
 
       {/* Avis */}
