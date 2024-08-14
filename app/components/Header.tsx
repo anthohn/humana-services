@@ -41,7 +41,7 @@ export default function Header2() {
                     </button>
                 </div>
                 <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
-                    <ul className="text-[#FF8A00] text-5xl h-screen md:h-0 md:text-[18px] md:font-normal md:text-gray-50 flex flex-col justify-center md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <ul className="text-[#FF8A00] text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-[18px] md:font-normal md:text-gray-50 flex flex-col justify-center md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                         <li>
                             <Link className={`link ${pathname === '/' ? 'underline underline-offset-8' : ''}`} href="/" onClick={closeMenu}>Accueil</Link>
                         </li>
