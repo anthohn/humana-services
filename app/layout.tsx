@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
 import Header from '@/app/components/Header'
-
 import Footer from '@/app/components/Footer'
 import { Toaster } from "react-hot-toast";
-
 import "./globals.css";
 
 const kanit = Kanit({

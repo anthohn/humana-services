@@ -18,10 +18,9 @@ export default function Home() {
       <Image
             src={iStockBack}
             layout='fill'
-            objectFit='cover'
             quality={100}
             alt='Seniors'
-            className="-z-[999]" // image est en arrière-plan
+            className="-z-[999] object-cover	" // image est en arrière-plan
             />
             
             <div className="flex flex-col w-8/12 mx-auto justify-center  h-screen">
