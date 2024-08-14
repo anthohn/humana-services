@@ -75,7 +75,7 @@ export default function Home() {
       </div>
 
       {/* A propos */}
-      <div className="flex flex-col space-y-20 lg:space-y-40 justify-center items-center bg-[#AC96D5] pt-14 pb-44 lg:pt-36 px-8">
+      <div className="flex flex-col space-y-20 lg:space-y-40 justify-center items-center bg-[#AC96D5] pt-14 pb-16 lg:pb-44 lg:pt-36 px-8">
         <div className="flex flex-col space-y-4 w-full lg:w-2/3 pb-4 border-b">
           <p className="flex w-full font-medium text-4xl xl:text-5xl text-gray-50 font-serif">À propos de nous</p>
           {accordionData.map((item, index) => (
@@ -84,7 +84,7 @@ export default function Home() {
                       className="flex w-full text-gray-50 text-2xl justify-between border-t pt-4"
                       onClick={() => toggleAccordion(index)}
                   >
-                      <span>{item.title}</span>
+                      <span className="text-xl sm:text-2xl">{item.title}</span>
                       <span>{openIndex === index ? '-' : '+'}</span>
                   </button>
                   <motion.div
@@ -93,7 +93,7 @@ export default function Home() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                   >
-                      <div className="text-gray-50 text-2xl flex w-9/12 py-8">
+                      <div className="text-gray-50 text-lg lg:text-xl xl:text-2xl flex w-full lg:w-9/12 py-8">
                           {item.content}
                       </div>
                   </motion.div>
@@ -104,16 +104,16 @@ export default function Home() {
 
       {/* Avis */}
       <div 
-        className="flex flex-col space-y-16 md:space-y-4 justify-center items-center bg-gray-50 py-36 px-8 md:px-60">
+        className="flex flex-col space-y-16 xl:space-y-4 justify-center items-center bg-gray-50 py-16 lg:py-36 px-8 xl:px-60">
 
           <div className="flex w-full justify-start">
-              <p className="w-2/3 text-lg md:text-2xl text-[#AC96D5] italic underline">Avis de nos clients</p>
+              <p className="w-2/3 text-lg xl:text-2xl text-[#AC96D5] italic underline">Avis de nos clients</p>
           </div>
-          <div className="flex w-full md:justify-start">
-              <p className="text-3xl md:text-4xl text-orange-500 md:w-2/3 font-serif">« Mon épouse retrouve le sourire et la joie de vivre en présence de l&apos;auxiliaire d&apos;Humana »</p>
+          <div className="flex w-full xl:justify-start">
+              <p className="text-3xl xl:text-4xl text-orange-500 xl:w-2/3 font-serif">« Mon épouse retrouve le sourire et la joie de vivre en présence de l&apos;auxiliaire d&apos;Humana »</p>
           </div>
-          <div className="flex w-full md:justify-end">
-              <p className="text-3xl md:text-4xl text-orange-500 md:w-2/3 font-serif">« Mon père ancien pilote, peut ressortir se balader à l&apos;aérodrome grâce à l&apos;accompagnement d&apos;Humana 😎 »</p>
+          <div className="flex w-full xl:justify-end">
+              <p className="text-3xl xl:text-4xl text-orange-500 xl:w-2/3 font-serif">« Mon père ancien pilote, peut ressortir se balader à l&apos;aérodrome grâce à l&apos;accompagnement d&apos;Humana 😎 »</p>
           </div>
       </div>
       <div className="flex justify-center bg-[#E7DFF5] pt-28">

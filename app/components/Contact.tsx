@@ -6,10 +6,10 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   return (
-    <div className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center p-8 md:p-0">
-      <p className="text-[#AC96D5] font-medium text-5xl font-serif">Contactez-nous !</p>
+    <div className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center sm:p-8 md:p-0">
+      <p className="text-[#AC96D5] font-medium text-4xl sm:text-5xl md:text-6xl font-serif">Contactez-nous !</p>
       <form
-        className="mt-10 flex flex-col space-y-3 bg-white p-10 rounded-lg"
+        className="mt-10 flex flex-col space-y-3 bg-white p-10 sm:rounded-lg"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
