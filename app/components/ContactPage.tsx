@@ -10,7 +10,7 @@ export default function Contact() {
     <div className="mb-20 sm:mb-28 text-center">
       
       <form
-        className="flex flex-col space-y-3 p-10 rounded-2xl"
+        className="flex flex-col space-y-3 rounded-2xl"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 

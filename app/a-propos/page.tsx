@@ -8,7 +8,7 @@ export default function About() {
             <div className="flex justify-center bg-[#E7DFF5] pb-20">
                 <div className="flex flex-col-reverse md:flex-row md:space-x-8 my-12 p-12 xl:px-14 2xl:px-32 md:p-4 justify-between ">
                     <div className="flex flex-col md:basis-5/12">
-                        <h1 className="text-[34px] md:text-[30px] lg:text-4xl xl:text-5xl md:py-24 pb-12 pt-4 font-serif text-[#6A4AA4]">Qui sommes-nous ?</h1>
+                        <h1 className="text-[30px] lg:text-4xl xl:text-5xl md:py-24 pb-12 pt-4 font-serif text-[#6A4AA4]">Qui sommes-nous ?</h1>
                         <p className="text-[#AC96D5] text-xl lg:text-2xl tracking-wide text-justify"><span className="italic font-bold">Humana Services</span> est bien plus qu&apos;une entreprise d&apos;accompagnement à domicile. 
                             Nous sommes dévoués à rendre <span className="font-bold">votre retraite plus enrichissante</span> et pleine de <span className="font-bold">joie </span>
                             en <span className="font-bold">personnalisant des activités stimulantes</span> selon vos préférences. Chez nous, l&apos;aspect 
@@ -24,7 +24,6 @@ export default function About() {
                         <Image
                             src={seniorTalking}
                             alt='Seniors talking'
-                            // fill
                             className='object-cover rounded-xl'
                         />
                     </div>

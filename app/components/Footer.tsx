@@ -8,9 +8,10 @@ export default function Footer() {
                 <Link className="underline text-lg text-gray-50" href="/a-propos">
                     À propos
                 </Link>
-                <div className="flex flex-col items-center">
-                    <a href="mailto:contact@humana-services.ch" className="text-xl font-medium text-gray-50">contact@humana-services.ch - 1196 Gland</a>
-                    <a href="tel:0794673902" className="text-xl font-medium text-gray-50">079 467 39 02</a>
+                <div className="flex flex-col space-y-3 items-center text-lg sm:text-xl text-gray-50">
+                    <a href="mailto:contact@humana-services.ch" className="">contact@humana-services.ch</a>
+                    <p>1196 Gland</p>
+                    <a href="tel:0794673902" className="">079 467 39 02</a>
                 </div>
                 <a href="https://www.linkedin.com/company/humana-services"  target="_blank" className="bg-gray-50 rounded-md px-[10px] py-1 font-bold text-xl text-[#AC96D5] hover:bg-gray-200 transition">in</a>
 
