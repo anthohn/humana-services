@@ -4,6 +4,8 @@ import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 const kanit = Kanit({
   weight: '400',
@@ -27,6 +29,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Toaster position="bottom-right" />
+        <SpeedInsights />
       </body>
     </html>
   );
