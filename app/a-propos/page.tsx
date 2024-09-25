@@ -1,5 +1,10 @@
 import seniorTalking from '../../public/iStock-M-seniorTalking.jpg'
 import Image from 'next/image'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "à propos",
+};
 
 export default function About() {
 
