@@ -17,15 +17,15 @@ export default function Footer() {
                         <p>1196 Gland</p>
                         <a href="tel:0794673902" className="">079 467 39 02</a>
                     </div>
-                        <a href="https://www.linkedin.com/company/humana-services"  target="_blank" className="bg-gray-50 rounded-md px-[10px] py-1 font-bold text-xl text-[#AC96D5] hover:bg-gray-200 transition">in</a>
+                    <a href="https://www.linkedin.com/company/humana-services" target="_blank" className="bg-gray-50 rounded-md px-[10px] py-1 font-bold text-xl text-[#AC96D5] hover:bg-gray-200 transition">in</a>
                 </div>
                 <a className="flex flex-wrap space-x-4 items-center" href="https://swiss-berry.com" target="_blank">
                     <p className="text-gray-50">Website made by</p>
                     <Image
-                    priority
-                    src={swissBerry}
-                    alt="Arrow icon"
-                    width={100}
+                        priority
+                        src={swissBerry}
+                        alt="Arrow icon"
+                        width={100}
                     />
                 </a>
             </div>

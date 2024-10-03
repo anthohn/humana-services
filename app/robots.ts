@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
                 allow: "/",
             }
         ],
-        sitemap: 'https://www.humana-services.ch/sitemap.xml'
+        sitemap: 'https://humana-services.ch/sitemap.xml'
     }
 }
