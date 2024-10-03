@@ -19,7 +19,7 @@ export default function Footer() {
                     </div>
                         <a href="https://www.linkedin.com/company/humana-services"  target="_blank" className="bg-gray-50 rounded-md px-[10px] py-1 font-bold text-xl text-[#AC96D5] hover:bg-gray-200 transition">in</a>
                 </div>
-                <a className="flex flex-wrap space-x-4 items-center" href="https://www.swiss-berry.com" target="_blank">
+                <a className="flex flex-wrap space-x-4 items-center" href="https://swiss-berry.com" target="_blank">
                     <p className="text-gray-50">Website made by</p>
                     <Image
                     priority
