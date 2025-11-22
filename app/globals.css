@@ -2,82 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Premium Palette */
-  --primary: #4A3B69;
-  /* Deep Royal Purple */
-  --primary-light: #6B5B8E;
-  --secondary: #F3F0FA;
-  /* Soft Lavender */
-  --accent: #FFB088;
-  /* Warm Apricot */
-  --cream: #FDFBF7;
-  /* Warm Cream Background */
-  --text-dark: #2D2438;
-  /* Almost Black */
-  --text-light: #666070;
-  /* Muted Purple-Grey */
+.no-scroll {
+  overflow: hidden;
+}
 
-  --font-playfair: 'Playfair Display', serif;
-  --font-inter: 'Inter', sans-serif;
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 231, 223, 245;
+  --background-end-rgb: 255, 255, 255;
 }
 
 body {
-  color: var(--text-dark);
-  background-color: var(--cream);
-  font-family: var(--font-inter);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-playfair);
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-
-  .font-serif {
-    font-family: var(--font-playfair);
-  }
-
-  .font-sans {
-    font-family: var(--font-inter);
-  }
-
-  /* Organic Shapes */
-  .blob-shape {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-
-  .blob-shape-2 {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-
-  /* Glassmorphism Premium */
-  .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 20px 40px rgba(74, 59, 105, 0.06);
-  }
-
-  .glass-card-dark {
-    background: rgba(74, 59, 105, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  }
 }
 
-/* Hamburger Menu Animations */
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -99,8 +46,8 @@ h6 {
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 400ms;
-  stroke: #4A3B69;
-  /* Updated to Primary */
+  /* Transition de couleur ajoutée ici */
+  stroke: #ffffff;
   stroke-width: 4;
   stroke-linecap: round;
 }
@@ -121,7 +68,7 @@ h6 {
   stroke-dashoffset: -138px;
 }
 
+/* Nouvelle classe pour changer la couleur en orange */
 .active-line {
-  stroke: #FFB088;
-  /* Updated to Accent */
+  stroke: #FF8A00;
 }
