@@ -36,7 +36,7 @@ export default function Footer() {
                         <h3 className="text-xl font-serif mb-6 text-[#FFB088]">Contact</h3>
                         <ul className="space-y-4 text-purple-200">
                             <li>1196 Gland, Suisse</li>
-                            <li><a href="tel:0794673902" className="hover:text-white transition-colors">079 467 39 02</a></li>
+                            <li><a href="tel:0794673902" className="hover:text-white transition-colors">078 221 38 21</a></li>
                             <li><a href="mailto:contact@humana-services.ch" className="hover:text-white transition-colors">contact@humana-services.ch</a></li>
                         </ul>
                     </div>

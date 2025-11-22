@@ -45,7 +45,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-[#9CA3AF] uppercase tracking-wide font-medium">Téléphone</p>
-                                    <p className="text-xl text-[#4A3B69] font-medium">079 467 39 02</p>
+                                    <p className="text-xl text-[#4A3B69] font-medium">078 221 38 21</p>
                                 </div>
                             </a>
 

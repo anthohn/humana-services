@@ -38,7 +38,7 @@ export default function Header2() {
                         href="tel:0794673902"
                         className="hidden md:block bg-[#4A3B69] text-white hover:bg-[#3D3058] transition-colors rounded-full py-3 px-6 text-sm font-medium shadow-md"
                     >
-                        079 467 39 02
+                        078 221 38 21
                     </a>
                     <button
                         type="button"
@@ -71,7 +71,7 @@ export default function Header2() {
                                     href="tel:0794673902"
                                     className="bg-[#4A3B69] text-white rounded-full py-3 px-8 text-xl"
                                 >
-                                    079 467 39 02
+                                    078 221 38 21
                                 </a>
                             </li>
                         )}
