@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Kanit } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { Toaster } from "react-hot-toast";
@@ -7,10 +7,15 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
-const kanit = Kanit({
-  weight: '400',
+const playfair = Playfair_Display({
   subsets: ['latin'],
-})
+  variable: '--font-playfair',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body suppressHydrationWarning={true} className={kanit.className}>
+      <body suppressHydrationWarning={true} className={`${inter.variable} ${playfair.variable} font-sans bg-[#FDFBF7]`}>
         <Header />
         {children}
         <Footer />

@@ -7,10 +7,9 @@ import toast from "react-hot-toast";
 export default function Contact() {
 
   return (
-    <div className="mb-20 sm:mb-28 text-center">
-      
+    <div className="w-full">
       <form
-        className="flex flex-col space-y-3 rounded-2xl"
+        className="flex flex-col space-y-6"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -23,35 +22,57 @@ export default function Contact() {
         }}
       >
         {/* Prénom / Nom */}
-        <div className="flex space-x-4 ">
-          <div className="flex flex-col items-start space-y-2 w-1/2">
-            <label className="text-[#FF8A00]">Prénom</label>
-            <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="firstName" type="text" maxLength={50} />
+        <div className="flex flex-col sm:flex-row gap-6">
+          <div className="flex flex-col items-start space-y-2 w-full">
+            <label className="text-[#4A3B69] font-medium ml-2">Prénom</label>
+            <input
+              className="h-14 px-6 rounded-2xl bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all"
+              name="firstName"
+              type="text"
+              maxLength={50}
+              placeholder="Votre prénom"
+            />
           </div>
-          <div className="flex flex-col items-start space-y-2 w-1/2">
-            <label className="text-[#FF8A00]">Nom de famille</label>
-            <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="lastName" type="text" maxLength={50} />
+          <div className="flex flex-col items-start space-y-2 w-full">
+            <label className="text-[#4A3B69] font-medium ml-2">Nom</label>
+            <input
+              className="h-14 px-6 rounded-2xl bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all"
+              name="lastName"
+              type="text"
+              maxLength={50}
+              placeholder="Votre nom"
+            />
           </div>
         </div>
 
         {/* Email */}
         <div className="flex flex-col items-start space-y-2">
-          <div className="flex space-x-2">
-            <label className="text-[#FF8A00]">E-mail</label>
-            <label className="text-[#fab362]">(obligatoire)</label>
-          </div>
-          <input className="h-14 px-4 rounded-lg bg-gray-100 w-full" name="senderEmail" type="email" required maxLength={70} />
+          <label className="text-[#4A3B69] font-medium ml-2">E-mail <span className="text-[#FFB088]">*</span></label>
+          <input
+            className="h-14 px-6 rounded-2xl bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all"
+            name="senderEmail"
+            type="email"
+            required
+            maxLength={70}
+            placeholder="exemple@email.com"
+          />
         </div>
 
         {/* Message */}
         <div className="flex flex-col items-start space-y-2">
-          <div className="flex space-x-2">
-            <label className="text-[#FF8A00]">Message</label>
-            <label className="text-[#fab362]">(obligatoire)</label>
-          </div>
-          <textarea className="h-52 rounded-lg p-4 bg-gray-100 w-full" name="message" placeholder="Je souhaite recevoir un accompagnement de Humana-services." required maxLength={5000} />
+          <label className="text-[#4A3B69] font-medium ml-2">Message <span className="text-[#FFB088]">*</span></label>
+          <textarea
+            className="h-48 rounded-2xl p-6 bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all resize-none"
+            name="message"
+            placeholder="Bonjour, je souhaiterais avoir des informations sur..."
+            required
+            maxLength={5000}
+          />
         </div>
-        <SubmitBtn />
+
+        <div className="pt-4">
+          <SubmitBtn />
+        </div>
       </form>
     </div>
   );

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import Image from "next/image";
+import logo from '../../public/492F7A.png'
+
 
 export default function Header2() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,24 +27,24 @@ export default function Header2() {
     ];
 
     return (
-        <nav className={`md:bg-transparent ${isMenuOpen ? 'bg-[#E7DFF5]' : 'bg-transparent'} transition-colors duration-200`}>
+        <nav className={`sticky top-0 z-50 transition-all duration-300 ${isMenuOpen ? 'bg-[#F3F0FA]' : 'bg-white/80 backdrop-blur-md border-b border-white/20'}`}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <Image src={'/492F7A.png'} width={200} height={200} style={{ width: 200, height: 'auto' }} alt="logo" />
+                    <Image src={logo} width={150} height={150} style={{ width: 150, height: 'auto' }} alt="logo" />
                 </a>
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     {/* Numéro de téléphone visible uniquement en mode desktop */}
-                    <a 
-                        href="tel:0794673902" 
-                        className="hidden md:block bg-gray-50 text-[#B2A0D3] rounded-full py-3 px-4 text-sm"
+                    <a
+                        href="tel:0794673902"
+                        className="hidden md:block bg-[#4A3B69] text-white hover:bg-[#3D3058] transition-colors rounded-full py-3 px-6 text-sm font-medium shadow-md"
                     >
                         079 467 39 02
                     </a>
-                    <button 
-                        type="button" 
-                        className="inline-flex items-center w-16 h-16 justify-center text-sm rounded-lg md:hidden" 
-                        aria-controls="navbar-default" 
-                        aria-expanded={isMenuOpen} 
+                    <button
+                        type="button"
+                        className="inline-flex items-center w-16 h-16 justify-center text-sm rounded-lg md:hidden"
+                        aria-controls="navbar-default"
+                        aria-expanded={isMenuOpen}
                         onClick={toggleMenu}
                     >
                         <span className="sr-only">Open main menu</span>
@@ -50,12 +52,12 @@ export default function Header2() {
                     </button>
                 </div>
                 <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
-                    <ul className="text-[#FF8A00] text-5xl space-y-8 md:space-y-0 h-screen md:h-0 md:text-[18px] md:font-normal md:text-gray-50 flex flex-col justify-center md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <ul className="text-[#4A3B69] text-5xl space-y-8 md:space-y-0 h-screen md:h-auto md:text-lg md:font-medium flex flex-col justify-center md:p-0 md:flex-row md:space-x-10 rtl:space-x-reverse md:mt-0 md:border-0 font-serif md:items-center">
                         {navLinks.map(link => (
                             <li key={link.href}>
-                                <Link 
-                                    className={`link ${pathname === link.href ? 'underline underline-offset-8' : ''}`} 
-                                    href={link.href} 
+                                <Link
+                                    className={`link hover:text-[#FFB088] transition-colors ${pathname === link.href ? 'text-[#FFB088]' : ''}`}
+                                    href={link.href}
                                     onClick={closeMenu}
                                 >
                                     {link.label}
@@ -65,9 +67,9 @@ export default function Header2() {
                         {/* Ajout du numéro de téléphone ici */}
                         {isMenuOpen && (
                             <li>
-                                <a 
-                                    href="tel:0794673902" 
-                                    className="bg-gray-50 text-[#B2A0D3] rounded-full py-3 px-4 text-sm"
+                                <a
+                                    href="tel:0794673902"
+                                    className="bg-[#4A3B69] text-white rounded-full py-3 px-8 text-xl"
                                 >
                                     079 467 39 02
                                 </a>

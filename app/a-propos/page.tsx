@@ -1,39 +1,73 @@
 import seniorTalking from '../../public/iStock-M-seniorTalking.jpg'
 import Image from 'next/image'
 import { Metadata } from "next";
+import { FaQuoteLeft } from 'react-icons/fa';
 
 export const metadata: Metadata = {
-    title: "à propos",
+    title: "À Propos",
 };
 
 export default function About() {
-
     return (
-        <>
-            <div className="flex justify-center bg-[#E7DFF5] pb-20">
-                <div className="flex flex-col-reverse md:flex-row md:space-x-8 my-12 p-12 xl:px-14 2xl:px-32 md:p-4 justify-between ">
-                    <div className="flex flex-col md:basis-5/12">
-                        <h1 className="text-[30px] lg:text-4xl xl:text-5xl md:py-24 pb-12 pt-4 font-serif text-[#6A4AA4]">Qui sommes-nous ?</h1>
-                        <p className="text-[#AC96D5] text-xl lg:text-2xl tracking-wide text-justify"><span className="italic font-bold">Humana Services</span> est bien plus qu&apos;une entreprise d&apos;accompagnement à domicile. 
-                            Nous sommes dévoués à rendre <span className="font-bold">votre retraite plus enrichissante</span> et pleine de <span className="font-bold">joie </span>
-                            en <span className="font-bold">personnalisant des activités stimulantes</span> selon vos préférences. Chez nous, l&apos;aspect 
-                            humain est au cœur de tout ce que nous faisons, car nous croyons que chaque moment de 
-                            votre vie mérite d&apos;être vécu avec <span className="font-bold">passion et bonheur.</span> Nous sommes là pour vous 
-                            accompagner dans cette nouvelle phase de votre vie, en mettant l&apos;accent sur <span className="font-bold">votre 
-                            bien-être</span> et en créant des <span className="font-bold">expériences uniques qui égayeront chaque jour.</span> 
-                            Notre <span className="font-bold">équipe dévouée</span> est prête à travailler en étroite collaboration avec vous 
-                            pour construire un avenir à domicile <span className="font-bold">rempli de moments mémorables.</span>
-                        </p>
+        <main className="bg-[#FDFBF7] overflow-hidden">
+            {/* Hero Section */}
+            <section className="relative py-20 lg:py-32">
+                <div className="container mx-auto px-6 lg:px-16">
+                    <div className="text-center max-w-4xl mx-auto mb-20">
+                        <span className="text-[#FFB088] font-medium tracking-widest uppercase text-sm mb-4 block">Notre Histoire</span>
+                        <h1 className="text-5xl lg:text-7xl font-serif text-[#4A3B69] mb-8">
+                            Plus qu&apos;un service,<br />
+                            <span className="italic">une vocation.</span>
+                        </h1>
                     </div>
-                    <div className="flex h-[485px] md:h-full md:basis-7/12 md:mt-16">
-                        <Image
-                            src={seniorTalking}
-                            alt='Seniors talking'
-                            className='object-cover rounded-xl'
-                        />
+
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        {/* Image with Organic Shape */}
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-[#FFB088] opacity-20 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] blur-2xl transform rotate-6 scale-105"></div>
+                            <div className="relative h-[500px] w-full rounded-[40px] overflow-hidden shadow-2xl">
+                                <Image
+                                    src={seniorTalking}
+                                    alt='Moments de partage'
+                                    fill
+                                    className='object-cover'
+                                    priority
+                                />
+                            </div>
+                        </div>
+
+                        {/* Text Content */}
+                        <div className="space-y-8">
+                            <div className="text-[#4A3B69]">
+                                <FaQuoteLeft className="text-4xl text-[#E7DFF5] mb-6" />
+                                <p className="text-2xl font-serif leading-relaxed mb-6">
+                                    Humana Services est né d&apos;une conviction simple : chaque instant de vie mérite d&apos;être célébré.
+                                </p>
+                            </div>
+
+                            <div className="text-[#666070] text-lg leading-relaxed space-y-6">
+                                <p>
+                                    Nous sommes bien plus qu&apos;une entreprise d&apos;accompagnement à domicile. Nous sommes les gardiens de votre sourire et les artisans de votre bien-être.
+                                </p>
+                                <p>
+                                    Notre mission est de transformer la retraite en une période <span className="text-[#4A3B69] font-medium">enrichissante et joyeuse</span>.
+                                    En personnalisant chaque activité, nous remettons l&apos;humain au cœur de l&apos;accompagnement.
+                                </p>
+                                <p>
+                                    Parce que nous croyons que le bonheur n&apos;a pas d&apos;âge, notre équipe dévouée s&apos;engage à créer avec vous un avenir rempli de moments mémorables.
+                                </p>
+                            </div>
+
+                            <div className="pt-8">
+                                <div className="inline-block p-6 bg-white rounded-2xl shadow-lg border border-purple-50">
+                                    <p className="font-serif text-[#4A3B69] text-xl mb-2">Notre Promesse</p>
+                                    <p className="text-[#666070]">Passion, Bonheur, et Bien-être absolu.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </>
+            </section>
+        </main>
     )
 }
