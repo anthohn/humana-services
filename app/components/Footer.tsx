@@ -45,9 +45,9 @@ export default function Footer() {
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-purple-300 text-sm">© {new Date().getFullYear()} Humana Services. Tous droits réservés.</p>
                     <div className="flex items-center gap-2 text-sm text-purple-300">
-                        <span>Designed by</span>
-                        <a href="https://swiss-berry.com" target="_blank" className="text-white hover:text-[#FFB088] transition-colors font-medium">
-                            Swiss Berry
+                        <span>Réalisé par : </span>
+                        <a href="https://anthony-hohn.ch" target="_blank" className="text-white hover:text-[#FFB088] transition-colors font-medium">
+                            Anthony Höhn
                         </a>
                     </div>
                 </div>
