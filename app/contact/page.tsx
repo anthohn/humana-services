@@ -4,6 +4,10 @@ import { FaEnvelope, FaPhone, FaLocationDot } from "react-icons/fa6";
 
 export const metadata: Metadata = {
     title: "Contact",
+    description: "Contactez Humana Services pour une évaluation gratuite. Nous sommes à votre écoute pour un accompagnement sur-mesure à domicile.",
+    alternates: {
+        canonical: '/contact',
+    },
 };
 
 export default function Contact() {

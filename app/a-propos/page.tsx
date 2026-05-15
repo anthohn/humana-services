@@ -5,6 +5,10 @@ import { FaQuoteLeft } from 'react-icons/fa';
 
 export const metadata: Metadata = {
     title: "À Propos",
+    description: "Découvrez l'histoire de Humana Services et notre engagement pour le bien-être des seniors en Suisse Romande.",
+    alternates: {
+        canonical: '/a-propos',
+    },
 };
 
 export default function About() {

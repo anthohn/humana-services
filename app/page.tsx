@@ -1,4 +1,10 @@
-'use client';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    alternates: {
+        canonical: '/',
+    },
+};
 
 import Image from "next/image";
 import iStockBack from '../public/iStock-1487976856.jpg'

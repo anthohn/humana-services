@@ -18,11 +18,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://humana-services.ch'),
   title: {
     default: "Humana Services",
     template: "%s - Humana Services"
   },
   description: "Humana Services vous offre un soutien personnalisé d'aide à domicile et vous aide à vivre une retraite épanouissante et joyeuse avec des activités concoctées selon vos goûts qui égayeront votre vie.",
+  openGraph: {
+    title: "Humana Services - L'art de prendre soin à domicile",
+    description: "Soutien personnalisé d'aide à domicile pour une retraite épanouissante en Suisse Romande.",
+    url: 'https://humana-services.ch',
+    siteName: 'Humana Services',
+    locale: 'fr_CH',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Humana Services',
+    description: "L'art de prendre soin à domicile.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

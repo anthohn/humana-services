@@ -23,8 +23,9 @@ export default function Contact() {
         {/* Prénom / Nom */}
         <div className="flex flex-col sm:flex-row gap-6">
           <div className="flex flex-col items-start space-y-2 w-full">
-            <label className="text-[#4A3B69] font-medium ml-2">Prénom</label>
+            <label htmlFor="firstName" className="text-[#4A3B69] font-medium ml-2">Prénom</label>
             <input
+              id="firstName"
               className="h-14 px-6 rounded-2xl bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all"
               name="firstName"
               type="text"
@@ -33,8 +34,9 @@ export default function Contact() {
             />
           </div>
           <div className="flex flex-col items-start space-y-2 w-full">
-            <label className="text-[#4A3B69] font-medium ml-2">Nom</label>
+            <label htmlFor="lastName" className="text-[#4A3B69] font-medium ml-2">Nom</label>
             <input
+              id="lastName"
               className="h-14 px-6 rounded-2xl bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all"
               name="lastName"
               type="text"
@@ -46,8 +48,9 @@ export default function Contact() {
 
         {/* Email */}
         <div className="flex flex-col items-start space-y-2">
-          <label className="text-[#4A3B69] font-medium ml-2">E-mail <span className="text-[#FFB088]">*</span></label>
+          <label htmlFor="senderEmail" className="text-[#4A3B69] font-medium ml-2">E-mail <span className="text-[#FFB088]">*</span></label>
           <input
+            id="senderEmail"
             className="h-14 px-6 rounded-2xl bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all"
             name="senderEmail"
             type="email"
@@ -59,8 +62,9 @@ export default function Contact() {
 
         {/* Message */}
         <div className="flex flex-col items-start space-y-2">
-          <label className="text-[#4A3B69] font-medium ml-2">Message <span className="text-[#FFB088]">*</span></label>
+          <label htmlFor="message" className="text-[#4A3B69] font-medium ml-2">Message <span className="text-[#FFB088]">*</span></label>
           <textarea
+            id="message"
             className="h-32 rounded-2xl p-6 bg-[#F9FAFB] border border-gray-200 w-full focus:outline-none focus:ring-2 focus:ring-[#AC96D5] focus:border-transparent transition-all resize-none"
             name="message"
             placeholder="Comment pouvons-nous vous aider ?"
