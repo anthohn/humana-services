@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/a-propos',
     },
+    openGraph: {
+        url: '/a-propos',
+    },
 };
 
 export default function About() {
