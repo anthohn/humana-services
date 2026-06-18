@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function GuidePage() {
   return (
-    <main className="min-h-screen pt-36 pb-24 bg-[#FDFBF7] relative overflow-hidden">
+    <main className="min-h-screen pt-24 md:pt-36 pb-24 bg-[#FDFBF7] relative overflow-hidden">
       {/* Background Decor elements */}
       <div className="absolute top-0 right-0 w-2/3 h-full bg-[#F3F0FA] -z-20 rounded-l-[100px] hidden lg:block" />
       <div className="absolute -top-10 -left-10 w-96 h-96 bg-[#FFB088] opacity-10 blur-[120px] rounded-full -z-10" />

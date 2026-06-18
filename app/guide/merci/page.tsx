@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function MerciPage() {
   return (
-    <main className="min-h-screen pt-36 pb-24 bg-[#FDFBF7] relative overflow-hidden flex items-center justify-center">
+    <main className="min-h-screen pt-24 md:pt-36 pb-24 bg-[#FDFBF7] relative overflow-hidden flex items-start justify-center">
       {/* Background Decor */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#FFB088] opacity-10 blur-[120px] rounded-full -z-10" />
 
