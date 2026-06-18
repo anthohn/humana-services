@@ -208,34 +208,31 @@ export default function Home() {
             </section>
 
             {/* Contact Section */}
-            <section className="py-32 bg-[#FDFBF7]">
-                <div className="container mx-auto px-6 lg:px-16">
-                    <div className="bg-[#FFB088]/5 rounded-[3rem] p-12 lg:p-20 text-center relative overflow-hidden">
-                        <div className="relative z-10">
-                            <h2 className="text-4xl lg:text-5xl font-serif text-[#4A3B69] mb-6">Prêt à améliorer votre quotidien ?</h2>
-                            <p className="text-[#666070] text-lg mb-10 max-w-2xl mx-auto">
-                                Contactez-nous pour une évaluation gratuite et sans engagement. Construisons ensemble le plan d&apos;aide idéal.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <a
-                                    href="tel:0782213821"
-                                    className="w-full sm:w-auto px-8 py-4 bg-[#4A3B69] text-white rounded-full font-medium hover:bg-[#3D3058] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3"
-                                >
-                                    <FaPhone className="text-sm" />
-                                    Appelez-nous (078 221 38 21)
-                                </a>
-                                <a
-                                    href="mailto:contact@humana-services.ch"
-                                    className="w-full sm:w-auto px-8 py-4 bg-white text-[#4A3B69] border border-[#E7DFF5] rounded-full font-medium hover:bg-[#F3F0FA] transition-all hover:-translate-y-1 flex items-center justify-center gap-3"
-                                >
-                                    <FaEnvelope className="text-sm" />
-                                    Écrivez-nous (contact@humana-services.ch)
-                                </a>
-                            </div>
-                        </div>
-                        {/* Decor */}
-                        <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#FFB088] rounded-full opacity-30 blur-3xl"></div>
-                        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#4A3B69] rounded-full opacity-10 blur-3xl"></div>
+            <section className="py-24 md:py-32 bg-[#FFB088]/5 text-center relative overflow-hidden">
+                {/* Decor */}
+                <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#FFB088] rounded-full opacity-25 blur-3xl"></div>
+                <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#4A3B69] rounded-full opacity-5 blur-3xl"></div>
+
+                <div className="container mx-auto px-6 lg:px-16 relative z-10">
+                    <h2 className="text-4xl lg:text-5xl font-serif text-[#4A3B69] mb-6">Prêt à améliorer votre quotidien ?</h2>
+                    <p className="text-[#666070] text-lg mb-10 max-w-2xl mx-auto">
+                        Contactez-nous pour une évaluation gratuite et sans engagement. Construisons ensemble le plan d&apos;aide idéal.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <a
+                            href="tel:0782213821"
+                            className="w-full sm:w-auto px-8 py-4 bg-[#4A3B69] text-white rounded-full font-medium hover:bg-[#3D3058] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3"
+                        >
+                            <FaPhone className="text-sm" />
+                            Appelez-nous (078 221 38 21)
+                        </a>
+                        <a
+                            href="mailto:contact@humana-services.ch"
+                            className="w-full sm:w-auto px-8 py-4 bg-white text-[#4A3B69] border border-[#E7DFF5] rounded-full font-medium hover:bg-[#F3F0FA] transition-all hover:-translate-y-1 flex items-center justify-center gap-3"
+                        >
+                            <FaEnvelope className="text-sm" />
+                            Écrivez-nous (contact@humana-services.ch)
+                        </a>
                     </div>
                 </div>
             </section>
