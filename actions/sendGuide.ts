@@ -14,12 +14,12 @@ export const sendGuide = async (formData: FormData) => {
   // Simple server-side validation
   if (!validateString(firstName, 100)) {
     return {
-      error: "Prénom invalide",
+      error: "Veuillez renseigner un prénom valide.",
     };
   }
   if (!validateString(senderEmail, 200)) {
     return {
-      error: "E-mail invalide",
+      error: "Veuillez renseigner une adresse e-mail valide.",
     };
   }
 
@@ -37,8 +37,9 @@ export const sendGuide = async (formData: FormData) => {
       })
     );
   } catch (error: unknown) {
+    console.error("Email rendering error:", error);
     return {
-      error: "Erreur de rendu de l'e-mail : " + getErrorMessage(error),
+      error: "Une erreur est survenue lors de la préparation de votre e-mail. Veuillez réessayer.",
     };
   }
 
@@ -134,8 +135,25 @@ export const sendGuide = async (formData: FormData) => {
       success: true,
     };
   } catch (error: unknown) {
+    const errMsg = getErrorMessage(error);
+    console.error("Erreur d'envoi d'e-mail:", errMsg);
+
+    // Si l'adresse mail est rejetée ou inexistante
+    if (
+      errMsg.includes("recipient") ||
+      errMsg.includes("rejected") ||
+      errMsg.includes("Domain not found") ||
+      errMsg.includes("450") ||
+      errMsg.includes("550")
+    ) {
+      return {
+        error: "L'adresse e-mail saisie semble incorrecte ou n'a pas pu être trouvée. Veuillez vérifier votre saisie et réessayer.",
+      };
+    }
+
+    // Erreur générique (connexion, etc.)
     return {
-      error: "Erreur lors de l'envoi de l'e-mail : " + getErrorMessage(error),
+      error: "Nous n'avons pas pu envoyer l'e-mail. Veuillez réessayer dans quelques instants ou nous contacter directement à contact@humana-services.ch.",
     };
   }
 };
