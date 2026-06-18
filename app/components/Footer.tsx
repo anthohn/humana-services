@@ -43,7 +43,13 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-purple-300 text-sm">© {new Date().getFullYear()} Humana Services. Tous droits réservés.</p>
+                    <div className="flex flex-col md:flex-row items-center gap-4 text-purple-300 text-sm">
+                        <p>© {new Date().getFullYear()} Humana Services. Tous droits réservés.</p>
+                        <span className="hidden md:inline text-purple-400/50">|</span>
+                        <Link href="/mentions-legales" className="hover:text-white transition-colors">
+                            Mentions légales &amp; Confidentialité
+                        </Link>
+                    </div>
                     <div className="flex items-center gap-2 text-sm text-purple-300">
                         <span>Réalisé par : </span>
                         <a href="https://anthony-hohn.ch" target="_blank" className="text-white hover:text-[#FFB088] transition-colors font-medium">
